@@ -15,7 +15,11 @@
      */
     "allowJs": true,
     "checkJs": true,
-    "moduleDetection": "force"
+    "moduleDetection": "force",
+    "baseUrl": ".",
+    "paths": {
+      "@circuit-box/*": ["../../src/*"]
+    }
   },
   "include": ["src/**/*.ts", "src/**/*.js", "src/**/*.svelte"]
 }

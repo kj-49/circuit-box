@@ -1,7 +1,7 @@
 <script lang="ts">
-    import Circuit from "./components/Circuit.svelte";
-
-
+    import { hello } from 'circuit-box';
 </script>
 
-<Circuit />
+<div>
+    <h1>{hello()}</h1>
+</div>

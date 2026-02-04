@@ -19,6 +19,9 @@ export class Canvas {
 		const dpr = window.devicePixelRatio || 1;
 		const rect = this.canvasElement.getBoundingClientRect();
 
+		// Prevent compounding scale() calls when resize() is invoked repeatedly.
+		this.ctx.setTransform(1, 0, 0, 1, 0, 0);
+
 		this.canvasElement.width = rect.width * dpr;
 		this.canvasElement.height = rect.height * dpr;
 
